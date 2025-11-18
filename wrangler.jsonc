@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-  "name": "vue-hono-cloudflare-dev",
+  "name": "mulmocast-viewer",
 	"compatibility_date": "2025-08-31",
 	"main": "server/src/index.ts",
 	"assets": {
