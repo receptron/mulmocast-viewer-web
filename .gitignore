@@ -41,3 +41,7 @@ coverage
 
 # Playwright MCP
 .playwright-mcp
+
+memo
+memo.md
+server.sh

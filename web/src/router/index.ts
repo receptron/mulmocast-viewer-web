@@ -5,6 +5,10 @@ import NotFound from "../components/NotFound.vue";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 
+import HomeView from "../views/HomeView.vue";
+import Viewer from "../views/Viewer.vue";
+import ListView from "../views/ListView.vue";
+
 const routeChildren: Array<RouteRecordRaw> = [
   {
     path: "",
@@ -15,6 +19,21 @@ const routeChildren: Array<RouteRecordRaw> = [
     path: "about",
     name: "about",
     component: About,
+  },
+  {
+    path: "/contents",
+    name: "home_viewer",
+    component: HomeView,
+  },
+  {
+    path: "/contents/:contentsId/list",
+    name: "list",
+    component: ListView,
+  },
+  {
+    path: "/contents/:contentsId/:page",
+    name: "home2",
+    component: Viewer,
   },
 ];
 
