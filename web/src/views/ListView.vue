@@ -97,7 +97,7 @@
       <BeatGridView
         v-else-if="viewMode === 'grid'"
         :beats="filteredBeats"
-        :base-path="`/${contentsId}`"
+        :base-path="`${BASEURL}${contentsId}`"
         :text-lang="textLang"
         :link-url-builder="getBeatLinkUrl"
         :link-component="RouterLink"
@@ -107,7 +107,7 @@
       <BeatListView
         v-else
         :beats="filteredBeats"
-        :base-path="`/${contentsId}`"
+        :base-path="`${BASEURL}${contentsId}`"
         :text-lang="textLang"
         :link-url-builder="getBeatLinkUrl"
         :link-component="RouterLink"
@@ -123,6 +123,7 @@
 import { ref, computed, nextTick, watch, onUnmounted } from "vue";
 import { useRoute, useRouter, RouterLink } from "vue-router";
 import { MulmoViewerHeader, BeatGridView, BeatListView, type ViewerData } from "mulmocast-viewer";
+import { BASEURL } from "../configs/config";
 
 const route = useRoute();
 const router = useRouter();
@@ -414,7 +415,7 @@ onUnmounted(() => {
 
 const main = async () => {
   try {
-    const res = await fetch("/" + contentsId + "/mulmo_view.json");
+    const res = await fetch(BASEURL + contentsId + "/mulmo_view.json");
     if (res.status === 200) {
       data.value = (await res.json()) as ViewerData;
       // Scroll to beat after data is loaded

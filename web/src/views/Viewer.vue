@@ -68,6 +68,7 @@ import { ref, computed, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
 import { MulmoViewerHeader, MulmoViewer, type ViewerData } from "mulmocast-viewer";
+import { BASEURL } from "../configs/config";
 
 const route = useRoute();
 const router = useRouter();
@@ -151,14 +152,13 @@ const contentsIdParam = route.params.contentsId;
 const contentsId = Array.isArray(contentsIdParam) ? contentsIdParam[0] : contentsIdParam;
 
 const basePath = computed(() => {
-  return "https://viewer-storage.mulmocast.com/contents/" + contentsId;
+  return BASEURL + contentsId;
 });
 
 const main = async () => {
   try {
     console.log(contentsId);
-    // https://viewer-storage.mulmocast.com/contents/ai/mulmo_view.json
-    const res = await fetch("https://viewer-storage.mulmocast.com/contents/" + contentsId + "/mulmo_view.json");
+    const res = await fetch(BASEURL + contentsId + "/mulmo_view.json");
     if (res.status === 200) {
       data.value = (await res.json()) as ViewerData;
     } else {
