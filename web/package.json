@@ -18,7 +18,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.554.0",
-    "mulmocast-viewer": "^0.1.4",
+    "mulmocast-viewer": "^0.1.5",
     "reka-ui": "^2.6.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.15",

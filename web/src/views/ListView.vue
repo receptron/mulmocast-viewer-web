@@ -14,7 +14,7 @@
     >
       <template #left>
         <h1
-          class="text-xl font-bold text-gray-800 sm:text-2xl"
+          class="text-base font-bold text-gray-800 sm:text-xl md:text-2xl"
           :class="{ 'hidden sm:block': isPlaying && viewMode === 'list' }"
         >
           {{ contentsId }} - Beat List
@@ -25,7 +25,7 @@
         <!-- Play/Stop button - always visible -->
         <button
           v-if="viewMode === 'list'"
-          class="rounded-lg px-4 py-2 font-medium shadow-sm transition-colors"
+          class="rounded-lg px-3 py-1.5 text-sm font-medium shadow-sm transition-colors sm:px-4 sm:py-2 sm:text-base"
           :class="isPlaying ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-green-600 text-white hover:bg-green-700'"
           @click="togglePlayback"
         >
@@ -35,7 +35,7 @@
         <!-- Desktop-only controls (hidden on mobile when playing) -->
         <template v-if="!isPlaying || viewMode !== 'list'">
           <button
-            class="hidden rounded-lg px-4 py-2 font-medium shadow-sm transition-colors sm:inline-block"
+            class="hidden rounded-lg px-3 py-1.5 text-sm font-medium shadow-sm transition-colors sm:inline-block sm:px-4 sm:py-2 sm:text-base"
             :class="
               showDigestOnly ? 'bg-amber-600 text-white hover:bg-amber-700' : 'bg-gray-600 text-white hover:bg-gray-700'
             "
@@ -44,7 +44,7 @@
             {{ showDigestOnly ? "Show All" : "Digest" }}
           </button>
           <button
-            class="hidden rounded-lg bg-indigo-600 px-4 py-2 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700 sm:inline-block"
+            class="hidden rounded-lg bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-indigo-700 sm:inline-block sm:px-4 sm:py-2 sm:text-base"
             @click="viewMode = viewMode === 'grid' ? 'list' : 'grid'"
           >
             {{ viewMode === "grid" ? "Show Full Text" : "Show Grid" }}
@@ -56,18 +56,18 @@
         <!-- Mobile-only: Digest button when not playing -->
         <button
           v-if="!isPlaying"
-          class="rounded-lg px-4 py-2 font-medium shadow-sm transition-colors sm:hidden"
+          class="rounded-lg px-3 py-1.5 text-sm font-medium shadow-sm transition-colors sm:hidden"
           :class="
             showDigestOnly ? 'bg-amber-600 text-white hover:bg-amber-700' : 'bg-gray-600 text-white hover:bg-gray-700'
           "
           @click="showDigestOnly = !showDigestOnly"
         >
-          {{ showDigestOnly ? "Show All" : "Digest" }}
+          {{ showDigestOnly ? "All" : "Digest" }}
         </button>
 
         <!-- Mobile-only: Settings button -->
         <button
-          class="rounded-lg bg-indigo-600 px-3 py-2 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700 sm:hidden"
+          class="rounded-lg bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-indigo-700 sm:hidden"
           @click="showMobileSettings = true"
         >
           ⚙️
@@ -76,21 +76,21 @@
         <!-- Mobile-only: View mode toggle when not playing -->
         <button
           v-if="!isPlaying"
-          class="rounded-lg bg-indigo-600 px-4 py-2 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700 sm:hidden"
+          class="rounded-lg bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-indigo-700 sm:hidden"
           @click="viewMode = viewMode === 'grid' ? 'list' : 'grid'"
         >
-          {{ viewMode === "grid" ? "Full Text" : "Grid" }}
+          {{ viewMode === "grid" ? "Text" : "Grid" }}
         </button>
       </template>
     </MulmoViewerHeader>
 
-    <div class="container mx-auto px-4 py-8">
+    <div class="container mx-auto px-3 py-4 sm:px-4 sm:py-6 md:py-8">
       <div v-if="data === undefined" class="py-12 text-center">
-        <p class="text-gray-600">Loading...</p>
+        <p class="text-sm text-gray-600 sm:text-base">Loading...</p>
       </div>
 
       <div v-else-if="data === null" class="py-12 text-center">
-        <p class="text-xl text-red-600">404 - Content not found</p>
+        <p class="text-lg text-red-600 sm:text-xl">404 - Content not found</p>
       </div>
 
       <!-- Grid View -->

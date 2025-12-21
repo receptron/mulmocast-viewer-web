@@ -2556,10 +2556,10 @@ muggle-string@^0.4.1:
   resolved "https://registry.yarnpkg.com/muggle-string/-/muggle-string-0.4.1.tgz#3b366bd43b32f809dc20659534dd30e7c8a0d328"
   integrity sha512-VNTrAak/KhO2i8dqqnqnAHOa3cYBwXEZe9h+D5h/1ZqFSTEFHdM65lR7RoIqq3tBBYavsOXV84NoHXZ0AkPyqQ==
 
-mulmocast-viewer@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/mulmocast-viewer/-/mulmocast-viewer-0.1.4.tgz#02d8d4a0a71d21c24654f9e0dfefb897a09db571"
-  integrity sha512-DTTUhwsKEQd5ZS05bG2BiiPEJBVFvf9XdfhOOpxdi0E5ae5AWXh13WKIgjrZUw6JFGwSPO+uiDXGL9TCSBZ9qw==
+mulmocast-viewer@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/mulmocast-viewer/-/mulmocast-viewer-0.1.5.tgz#202461a8d8b2e44eb4400acb411e99104056133c"
+  integrity sha512-IpAfowCqJXcnlZQ/X271YRL3x5lpUiAYbhpvE7HD2nOBjRPmpvBkRVhdr+5lgy5/RWUsr4I/DfaURHbQrNIlpQ==
 
 nanoid@^3.3.11:
   version "3.3.11"

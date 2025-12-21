@@ -9,8 +9,10 @@
       v-model:show-mobile-settings="showMobileSettings"
     >
       <template #left>
-        <div class="rounded-full bg-indigo-600 px-4 py-2 text-lg font-bold text-white">#{{ routerPage + 1 }}</div>
-        <div class="flex items-center gap-4 text-sm text-gray-600">
+        <div class="rounded-full bg-indigo-600 px-3 py-1.5 text-base font-bold text-white sm:px-4 sm:py-2 sm:text-lg">
+          #{{ routerPage + 1 }}
+        </div>
+        <div class="hidden flex-wrap items-center gap-2 text-xs text-gray-600 sm:flex sm:gap-4 sm:text-sm">
           <span v-if="currentBeat?.startTime !== undefined">
             <span class="font-semibold">Start:</span>
             {{ formatDuration(currentBeat.startTime) }}
@@ -28,13 +30,21 @@
       <template #actions>
         <router-link
           :to="`/contents/${contentsId}/list?beat=${routerPage}&audioLang=${audioLang}&textLang=${textLang}`"
-          class="rounded-lg bg-indigo-600 px-4 py-2 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700"
+          class="hidden rounded-lg bg-indigo-600 px-4 py-2 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700 sm:inline-block"
         >
           View List
         </router-link>
       </template>
 
       <template #mobile-actions>
+        <!-- Mobile-only: View List button -->
+        <router-link
+          :to="`/contents/${contentsId}/list?beat=${routerPage}&audioLang=${audioLang}&textLang=${textLang}`"
+          class="rounded-lg bg-indigo-600 px-3 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-indigo-700 sm:hidden"
+        >
+          List
+        </router-link>
+
         <!-- Mobile-only: Settings button -->
         <button
           class="rounded-lg bg-indigo-600 px-3 py-2 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700 sm:hidden"
