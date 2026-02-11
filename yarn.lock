@@ -2180,10 +2180,10 @@ has-flag@^4.0.0:
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-4.0.0.tgz#944771fd9c81c81265c4d6941860da06bb59479b"
   integrity sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
 
-hono@4.11.4:
-  version "4.11.4"
-  resolved "https://registry.yarnpkg.com/hono/-/hono-4.11.4.tgz#0c1ba7175e08624932224bc7644e4cb22b294080"
-  integrity sha512-U7tt8JsyrxSRKspfhtLET79pU8K+tInj5QZXs1jSugO1Vq5dFj3kmZsRldo29mTBfcjDRVRXrEZ6LS63Cog9ZA==
+hono@4.11.9:
+  version "4.11.9"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-4.11.9.tgz#4e0dec5309a8f05216c777cbd93131a41cf28eb9"
+  integrity sha512-Eaw2YTGM6WOxA6CXbckaEvslr2Ne4NFsKrvc0v97JD5awbmeBLO5w9Ho9L9kmKonrwF9RJlW6BxT1PVv/agBHQ==
 
 hookable@^5.5.3:
   version "5.5.3"
