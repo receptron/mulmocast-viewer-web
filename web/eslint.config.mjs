@@ -82,6 +82,7 @@ export default [
       ...vue.configs["flat/recommended"].rules,
       ...typescript.configs.recommended.rules,
       ...baseRules,
+      "no-useless-assignment": "off",
       "vue/multi-word-component-names": "off",
       "vue/html-self-closing": [
         "error",
