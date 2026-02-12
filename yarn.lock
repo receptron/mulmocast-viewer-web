@@ -793,6 +793,13 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@mulmocast/types@2.1.36", "@mulmocast/types@^2.1.36":
+  version "2.1.36"
+  resolved "https://registry.yarnpkg.com/@mulmocast/types/-/types-2.1.36.tgz#21fa83289fbc8bb60cd1bdbe3905f43b09bb3eff"
+  integrity sha512-ftr+hKgZHmGNQUhd7yVxGyOZwWe3/KA251tWfe5lxjcEeZV4tAlUA1C8p3zd4Qp32Jp2cjHwGUvZi7PEJrv4qw==
+  dependencies:
+    zod "^4.3.5"
+
 "@napi-rs/wasm-runtime@^1.1.0":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@napi-rs/wasm-runtime/-/wasm-runtime-1.1.1.tgz#c3705ab549d176b8dc5172723d6156c3dc426af2"
@@ -2400,10 +2407,12 @@ muggle-string@^0.4.1:
   resolved "https://registry.yarnpkg.com/muggle-string/-/muggle-string-0.4.1.tgz#3b366bd43b32f809dc20659534dd30e7c8a0d328"
   integrity sha512-VNTrAak/KhO2i8dqqnqnAHOa3cYBwXEZe9h+D5h/1ZqFSTEFHdM65lR7RoIqq3tBBYavsOXV84NoHXZ0AkPyqQ==
 
-mulmocast-viewer@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/mulmocast-viewer/-/mulmocast-viewer-0.2.1.tgz#53aaf0b4f6b7aeac09baaf27ad0b9a26bac7a26d"
-  integrity sha512-l54Pr5q0Nv3E/eyC5TaGUQdB0RKqtJ/pOlAWvI2xljTa3/PNo6/YaI2+0sCcWzUtf24ILMVVzol0NJ6npYpKIw==
+mulmocast-viewer@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/mulmocast-viewer/-/mulmocast-viewer-0.2.2.tgz#9fc13295eb670a2a9f54b09631fe6a40081295f7"
+  integrity sha512-RJCPX5psE0fs42tkMVtpjjN9IufiZR/agDnx3RKfjLqlZ7iGTdVIu+xAiCKuUAlv80foZFjRu3xrYfMvQ9KYLA==
+  dependencies:
+    "@mulmocast/types" "2.1.36"
 
 nanoid@^3.3.11:
   version "3.3.11"
@@ -3164,3 +3173,8 @@ youch@4.1.0-beta.10:
     "@speed-highlight/core" "^1.2.7"
     cookie "^1.0.2"
     youch-core "^0.3.3"
+
+zod@^4.3.5:
+  version "4.3.6"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-4.3.6.tgz#89c56e0aa7d2b05107d894412227087885ab112a"
+  integrity sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==

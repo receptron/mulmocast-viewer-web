@@ -12,13 +12,14 @@
     "format": "prettier --write 'src/**/*.{ts,json,yaml,vue}' *.json *.ts *.mjs"
   },
   "dependencies": {
+    "@mulmocast/types": "^2.1.36",
     "@tailwindcss/vite": "^4.1.18",
     "@unhead/vue": "^2.1.2",
     "@vueuse/core": "^14.2.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.563.0",
-    "mulmocast-viewer": "^0.2.1",
+    "mulmocast-viewer": "^0.2.2",
     "reka-ui": "^2.7.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.18",
