@@ -45,3 +45,6 @@ coverage
 memo
 memo.md
 server.sh
+
+# jscpd duplication-scan output
+report/
