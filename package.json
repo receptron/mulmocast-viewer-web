@@ -15,11 +15,13 @@
     "lint": "yarn workspace web run lint",
     "deploy": "yarn workspace web run build && yarn workspace server run deploy",
     "type-check": "yarn workspace web type-check",
-    "format": "prettier --write 'web/**/*.{ts,json,yaml,vue}' 'server/**/*.{ts,json}' '*.json' '*.md'"
+    "format": "prettier --write 'web/**/*.{ts,json,yaml,vue}' 'server/**/*.{ts,json}' '*.json' '*.md'",
+    "knip": "knip"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "globals": "^17.8.0",
+    "knip": "^6",
     "prettier": "^3.9.6"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  // Yarn-workspaces monorepo: knip auto-detects the "web" and "server" workspaces from
+  // package.json and analyzes each. web is a Vite/Vue app (entry resolved from index.html ->
+  // src/main.ts via knip's vite plugin); server is a Hono Cloudflare Worker whose src/index.ts
+  // is picked up by knip's default entry patterns. No top-level entry/project globs are set so
+  // this auto-detection is not overridden.
+  "ignoreExportsUsedInFile": true,
+  "includeEntryExports": false,
+  "rules": {
+    // Warn mode: every rule is "warn" (reported, exit 0) or "off". Nothing gates CI here.
+    "files": "warn",
+    "dependencies": "warn",
+    "devDependencies": "warn",
+    "unlisted": "warn",
+    "exports": "warn",
+    "types": "warn",
+    "unresolved": "off",
+    "binaries": "off",
+    "nsExports": "off",
+    "nsTypes": "off",
+    "enumMembers": "off",
+    "duplicates": "off",
+  },
+}
